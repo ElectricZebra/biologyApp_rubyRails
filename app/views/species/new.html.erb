@@ -1,21 +1,45 @@
-<h1 class='title'>New Species<h1>
+<% content_for :page_title, 'Add a new species' %>
 
-<div class='section'>
+<!--
+# <div class='section'>
+#   <%= form_tag do %>
+#     Form contents
+#   <% end %>
+
+#   <%= radio_button_tag(:age, "child") %>
+#   <%= label_tag(:age_child, "I am younger than 21") %>
   
+#   <%= form_tag(Species, :method => "get") do %>
+#     <%= label_tag(:q, "Search for:") %>
+#     <%= text_field_tag(:q) %>
+#     <%= submit_tag("Search") %>
+#   <% end %>
+# </div>
+-->
 
-  <%= form_tag do %>
-    Form contents
-  <% end %>
-
-  <%= radio_button_tag(:age, "child") %>
-  <%= label_tag(:age_child, "I am younger than 21") %>
-  
-  <%= form_tag(Species, :method => "get") do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-  <% end %>
-
-</div>
+  <div class='section'>
+    <%= simple_form_for @species do |f| %>
+      <div class='field'>
+        <div class='control'>
+          <%= f.input :latinName, input_html: { class: 'input' }, wrapper: false, label: 'Latin Name' %>
+        </div>
+      </div>
+      
+      <div class='field'>
+        <div class='control'>
+          <%= f.input :commonName, input_html: { class: 'input' }, wrapper: false, label: 'Common Name' %>
+        </div>
+      </div>
+    
+    <div class='field'>
+      <div class='control'>
+        <%= f.input :description, input_html: { class: 'textarea' }, wrapper: false, label: 'Description' %>
+      </div>
+    </div>
+    
+    <%= f.button :submit, 'Add new species', class: 'button is-primary' %>
+    
+    <% end %>
+  </div>
 
 

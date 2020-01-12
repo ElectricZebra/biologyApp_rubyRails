@@ -1,6 +1,7 @@
 class SpeciesController < ApplicationController
   
   def index
+    @species = Species.all.order('created_at DESC')
   end
   
   def new
@@ -15,13 +16,16 @@ class SpeciesController < ApplicationController
     else
       render 'new'
     end 
-    
+  end
+  
+  def show
+    @species = Species.find(params[:id])
   end
   
   private
   
   def species_params
-    params.require(:species).permit(:latinName, :commonName)
+    params.require(:species).permit(:latinName, :commonName, :description)
   end
   
 end
