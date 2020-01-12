@@ -1,0 +1,21 @@
+<h1 class='title'>New Species<h1>
+
+<div class='section'>
+  
+
+  <%= form_tag do %>
+    Form contents
+  <% end %>
+
+  <%= radio_button_tag(:age, "child") %>
+  <%= label_tag(:age_child, "I am younger than 21") %>
+  
+  <%= form_tag(Species, :method => "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+</div>
+
+
