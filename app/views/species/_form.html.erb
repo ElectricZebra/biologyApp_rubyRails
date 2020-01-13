@@ -1,0 +1,24 @@
+<div class='section'>
+<%= simple_form_for @species do |f| %>
+  <div class='field'>
+    <div class='control'>
+      <%= f.input :latinName, input_html: { class: 'input' }, wrapper: false, label: 'Latin Name' %>
+    </div>
+  </div>
+  
+  <div class='field'>
+    <div class='control'>
+      <%= f.input :commonName, input_html: { class: 'input' }, wrapper: false, label: 'Common Name' %>
+    </div>
+  </div>
+
+<div class='field'>
+  <div class='control'>
+    <%= f.input :description, input_html: { class: 'textarea' }, wrapper: false, label: 'Description' %>
+  </div>
+</div>
+
+<%= f.button :submit, class: 'button is-primary' %>
+
+<% end %>
+</div>

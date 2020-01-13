@@ -22,6 +22,27 @@ class SpeciesController < ApplicationController
     @species = Species.find(params[:id])
   end
   
+  def update
+    @species = Species.find(params[:id])
+    
+    if @species.update(species_params)
+      redirect_to @species
+    else
+      render 'edit'
+    end
+  end
+  
+  def edit
+    @species = Species.find(params[:id])
+  end
+  
+  def destroy
+    @species = Species.find(params[:id])
+    @species.destroy
+    
+    redirect_to @species
+  end
+  
   private
   
   def species_params

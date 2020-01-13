@@ -1,13 +1,31 @@
 <section class='section'>
   <div class='container'>
-    <div class='is-italic'>
-      <h1 class='title'>
-        <%= @species.latinName %>
-      </h1>
-    </div>
-    <h2 class='subtitle'>
+    <nav class='level'>
+      <!-- Left side -->
+      <div class='level-left'>
+        <div class='is-italic'>
+          <h1 class='title'>
+            <%= @species.latinName %>
+          </h1>
+        </div>
+      </div>
+      
+      <!-- Right Side -->
+      <div class='level-right'>
+        <p class='level-item'>
+          <%= link_to 'Edit', edit_species_path(@species), class: 'button' %>
+        </p>
+        <p class='level-item'>
+          <%= link_to 'Delete', species_path(@species), method: :delete, data: { confirm: "Are you sure?" }, class: "button is-danger" %>
+        </p>
+      </div>
+    </nav>
+    <hr />
+    
+    
+    <h1 class='subtitle'>
       <%= @species.commonName %>
-    </h2>
+    </h1>
     <div class='content'>
       <%= @species.description %>
     </div>
