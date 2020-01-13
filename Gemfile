@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.5.7"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.1'
@@ -35,12 +35,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Bulma CSS
 gem 'bulma-rails', '~> 0.8.0'
 
-# Simple Form
+# Ruby form builder 
 gem 'simple_form', '~> 3.4'
 
+# required for heroku deployment
 gem 'nokogiri'
 
+# required for heroku deployment
 gem 'rspec'
+
+# required for heroku deployment
+gem 'rack', '~> 1.6'
 
 
 
