@@ -38,7 +38,9 @@ gem 'bulma-rails', '~> 0.8.0'
 # Simple Form
 gem 'simple_form', '~> 3.4'
 
-# gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+gem 'nokogiri'
+
+gem 'rspec'
 
 
 
