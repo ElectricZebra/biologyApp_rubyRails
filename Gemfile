@@ -47,7 +47,11 @@ gem 'rspec'
 # required for heroku deployment
 gem 'rack', '~> 1.6'
 
+# Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+# gem 'figaro', '~> 1.1', '>= 1.1.1'
 
+# Thor is a toolkit for building powerful command-line interfaces. figaro gem dependency
+# gem 'thor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
