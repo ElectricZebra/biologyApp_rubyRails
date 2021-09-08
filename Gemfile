@@ -66,6 +66,6 @@ group :development do
   gem 'spring'
   
   # Make error messages easier to read
-  gem 'better_errors', '~> 2.5', '>= 2.5.1'
+  gem 'better_errors', '~> 2.8'
 end
 
